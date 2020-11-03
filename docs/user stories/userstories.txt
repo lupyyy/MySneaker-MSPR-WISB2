@@ -1,0 +1,8 @@
+User stories 
+
+Kevin : A besoin de se tenir informer des dernieres sorties de sneakers.
+Connaitre le prix actuel des differentes skeakers pour calculter la valeur de sa collection.
+
+Victor : Veut faire plaisir a son fils de 17 ans fan de skeakers mais ne connais pas ce secteurs, ni les prix des models 
+
+Léa : Fan absolue de mode, elle veut etre la permiere a posseder les dernieres skeakers sortie.
