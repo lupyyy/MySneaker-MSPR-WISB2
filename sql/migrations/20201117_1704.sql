@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS `mysneakers` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `mysneakers`;
-
 CREATE TABLE `MODELE` (
   `modele_id` VARCHAR(42),
   `nom` VARCHAR(42),
