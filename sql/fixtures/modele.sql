@@ -41,8 +41,8 @@ INSERT INTO `modele` (`modele_id`, `nom`,`date`, `prix`) VALUES
 (40,'Triple S Black (2019)', '28/12/2019', '420€'),
 (41,'Chuck Taylor All-Star 70s Hi Off-White', '15/06/2020', '170€'),
 (42,'Run Star Hike Hi Black White Gum', '16/03/2019', '420€'),
-(43,'Chuck Taylor All-Star 2-in-1 70s Hi Feng Chen Wang Ivory Black', '11/02/2020', '210€'),(35,'Retro High Fearless UNC Chicago', '11/02/2020', '210€'),
-(44,'Chuck Taylor All-Star 70s Hi Comme des Garcons Play Multi-Heart Whiteffspring Paisley Black', '07/07/2018', '120€'),/* ASICS */
+(43,'Chuck Taylor All-Star 2-in-1 70s Hi Feng Chen Wang Ivory Black', '11/02/2020', '210€'),
+(44,'Chuck Taylor All-Star 70s Hi Comme des Garcons Play Multi-Heart Whiteffspring Paisley Black', '07/07/2018', '120€'),
 (46,'Asics Gel-Lyte Neon Seaglass Safety Yellow', '18/04/2020', '320€'),
 (47,'ASICS Gel-BND Mega Man', '03/05/2019', '190€'),
 (48,'ASICS Gel-Lyte III OG Green Yellow (2019)', '23/12/2019', '530€'),
