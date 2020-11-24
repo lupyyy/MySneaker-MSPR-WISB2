@@ -35,7 +35,7 @@ INSERT INTO `modele` (`modele_id`, `nom`,`date`, `prix`) VALUES
 (34,'Mid Multi Patent (W)', '10/07/2019', '170€'),
 (35,'Mid Chicago Black Toe (GS)', '12/09/2019', '290€'),
 (36,'Mid Green Toe (GS)', '01/01/2019', '320€'),
-(37,'Retro High Fearless UNC Chicago', '11/02/2020', '210€'),(9,'Air Force 1 Low Off-White Volt', '21/08/2020', '410€'),
+(37,'Retro High Fearless UNC Chicago', '11/02/2020', '210€'),
 (38,'Triple S Clear Sole White', '16/09/2020', '390€'),
 (39,'Track Orange Blue', '25/11/2018', '220€'),
 (40,'Triple S Black (2019)', '28/12/2019', '420€'),
