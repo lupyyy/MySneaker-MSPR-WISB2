@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS `MODELES` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `MODELES`;
-
 CREATE TABLE `MODELE` (
   `modele_id` int,
   `nom` varchar(64),

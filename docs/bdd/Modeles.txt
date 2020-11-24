@@ -1,6 +1,0 @@
-modele (_modele_id_, nom, date, prix)
-appartient (_#marque_id_, _#modele_id_)
-marque (_marque_id_, nom, histoire)
-souhaite (_#user_id_, _#modele_id_)
-possede (_#user_id_, _#modele_id_)
-utilisateur (_user_id_, pseudo, mail, mdp, admin, created_at)
