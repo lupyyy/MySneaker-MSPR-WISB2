@@ -6,4 +6,3 @@ INSERT INTO `marque` (`marque_id`, `nom`, `histoire`) VALUES
 (5, 'Converse', "Converse fabrique des sneakers Chuck Taylor All Star et One Star depuis les débuts de la marque il y a plus d'un siècle, et désormais nous nous efforçons de concevoir des modèles qui font partie intégrante de la culture urbaine."),
 (6, 'Asics', "Asics est l'acronyme de l'expression latine de Juvénal « Anima Sana In Corpore Sano », en français « un esprit sain dans un corps sain »."),
 (7, 'Alexander Mcqueen', 'Alexander Mc Queen est un célèbre créateur de mode britannique et le nom de la marque qu’il a fondée en 1992.');
-
