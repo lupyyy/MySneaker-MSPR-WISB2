@@ -1,4 +1,4 @@
-CREATE TABLE `MODELE` (
+CREATE TABLE `modele` (
   `modele_id` int,
   `nom` varchar(64),
   `date` datetime,
@@ -6,32 +6,32 @@ CREATE TABLE `MODELE` (
   PRIMARY KEY (`modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `APPARTIENT` (
+CREATE TABLE `appartient` (
   `marque_id` int,
   `modele_id` int,
   PRIMARY KEY (`marque_id`, `modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `MARQUE` (
+CREATE TABLE `marque` (
   `marque_id` int,
   `nom` varchar(64),
   `histoire` text,
   PRIMARY KEY (`marque_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `SOUHAITE` (
+CREATE TABLE `souhaite` (
   `user_id` int,
   `modele_id` int,
   PRIMARY KEY (`user_id`, `modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `POSSEDE` (
+CREATE TABLE `possede` (
   `user_id` int,
   `modele_id` int,
   PRIMARY KEY (`user_id`, `modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `UTILISATEUR` (
+CREATE TABLE `utilisateur` (
   `user_id` int,
   `pseudo` varchar(64),
   `mail` varchar(128),
@@ -41,9 +41,9 @@ CREATE TABLE `UTILISATEUR` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `APPARTIENT` ADD FOREIGN KEY (`modele_id`) REFERENCES `MODELE` (`modele_id`);
-ALTER TABLE `APPARTIENT` ADD FOREIGN KEY (`marque_id`) REFERENCES `MARQUE` (`marque_id`);
-ALTER TABLE `SOUHAITE` ADD FOREIGN KEY (`modele_id`) REFERENCES `MODELE` (`modele_id`);
-ALTER TABLE `SOUHAITE` ADD FOREIGN KEY (`user_id`) REFERENCES `UTILISATEUR` (`user_id`);
-ALTER TABLE `POSSEDE` ADD FOREIGN KEY (`modele_id`) REFERENCES `MODELE` (`modele_id`);
-ALTER TABLE `POSSEDE` ADD FOREIGN KEY (`user_id`) REFERENCES `UTILISATEUR` (`user_id`);
+ALTER TABLE `appartient` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
+ALTER TABLE `appartient` ADD FOREIGN KEY (`marque_id`) REFERENCES `marque` (`marque_id`);
+ALTER TABLE `souhaite` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
+ALTER TABLE `souhaite` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`);
+ALTER TABLE `possede` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
+ALTER TABLE `possede` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`);
