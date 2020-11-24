@@ -1,4 +1,4 @@
-CREATE TABLE `MODELE` (
+CREATE TABLE `modele` (
   `modele_id` VARCHAR(42),
   `nom` VARCHAR(42),
   `date` VARCHAR(42),
@@ -6,7 +6,7 @@ CREATE TABLE `MODELE` (
   PRIMARY KEY (`modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `MARQUE` (
+CREATE TABLE `marque` (
   `marque_id` VARCHAR(42),
   `nom` VARCHAR(42),
   `histoire` VARCHAR(42),
@@ -14,19 +14,19 @@ CREATE TABLE `MARQUE` (
   PRIMARY KEY (`marque_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `SOUHAITE` (
+CREATE TABLE `souhaite` (
   `user_id` VARCHAR(42),
   `modele_id` VARCHAR(42),
   PRIMARY KEY (`user_id`, `modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `POSSEDE` (
+CREATE TABLE `possede` (
   `user_id` VARCHAR(42),
   `modele_id` VARCHAR(42),
   PRIMARY KEY (`user_id`, `modele_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `UTILISATEUR` (
+CREATE TABLE `utilisateur` (
   `user_id` VARCHAR(42),
   `pseudo` VARCHAR(42),
   `mail` VARCHAR(42),
@@ -36,8 +36,8 @@ CREATE TABLE `UTILISATEUR` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `MARQUE` ADD FOREIGN KEY (`modele_id`) REFERENCES `MODELE` (`modele_id`);
-ALTER TABLE `SOUHAITE` ADD FOREIGN KEY (`modele_id`) REFERENCES `MODELE` (`modele_id`);
-ALTER TABLE `SOUHAITE` ADD FOREIGN KEY (`user_id`) REFERENCES `UTILISATEUR` (`user_id`);
-ALTER TABLE `POSSEDE` ADD FOREIGN KEY (`modele_id`) REFERENCES `MODELE` (`modele_id`);
-ALTER TABLE `POSSEDE` ADD FOREIGN KEY (`user_id`) REFERENCES `UTILISATEUR` (`user_id`);
+ALTER TABLE `marque` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
+ALTER TABLE `souhaite` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
+ALTER TABLE `souhaite` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`);
+ALTER TABLE `possede` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
+ALTER TABLE `possede` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`);

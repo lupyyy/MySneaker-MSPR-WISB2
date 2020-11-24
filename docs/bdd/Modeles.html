@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>modele</span> (
+    <span class='primary'>modele_id</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>date</span>,
+    <span class='normal'>prix</span>
+  )
+</div>
+<div>
+  <span class='relation'>appartient</span> (
+    <span class='foreign primary'>marque_id</span>,
+    <span class='foreign primary'>modele_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>marque</span> (
+    <span class='primary'>marque_id</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>histoire</span>
+  )
+</div>
+<div>
+  <span class='relation'>souhaite</span> (
+    <span class='foreign primary'>user_id</span>,
+    <span class='foreign primary'>modele_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>possede</span> (
+    <span class='foreign primary'>user_id</span>,
+    <span class='foreign primary'>modele_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>utilisateur</span> (
+    <span class='primary'>user_id</span>,
+    <span class='normal'>pseudo</span>,
+    <span class='normal'>mail</span>,
+    <span class='normal'>mdp</span>,
+    <span class='normal'>admin</span>,
+    <span class='normal'>created_at</span>
+  )
+</div>
+</div>
+</body>
+</html>

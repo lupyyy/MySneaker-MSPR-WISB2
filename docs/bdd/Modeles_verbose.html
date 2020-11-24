@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+  #mld strong { font-weight: bold }
+  #mld i { font-style: italic }
+  #mld ul { list-style-type:square; margin: 0 0 1em 2em }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>modele</span> (
+    <span class='primary'>modele_id</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>date</span>,
+    <span class='normal'>prix</span>
+  )
+  <ul>
+    <li>Le champ <i>modele_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>modele</i>.</li>
+    <li>Les champs <i>nom</i>, <i>date</i> et <i>prix</i> étaient déjà de simples attributs de l'entité <i>modele</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>appartient</span> (
+    <span class='foreign primary'>marque_id</span>,
+    <span class='foreign primary'>modele_id</span>
+  )
+  <ul>
+    <li>Le champ <i>marque_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>marque</i>.</li>
+    <li>Le champ <i>modele_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>modele</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>marque</span> (
+    <span class='primary'>marque_id</span>,
+    <span class='normal'>nom</span>,
+    <span class='normal'>histoire</span>
+  )
+  <ul>
+    <li>Le champ <i>marque_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>marque</i>.</li>
+    <li>Les champs <i>nom</i> et <i>histoire</i> étaient déjà de simples attributs de l'entité <i>marque</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>souhaite</span> (
+    <span class='foreign primary'>user_id</span>,
+    <span class='foreign primary'>modele_id</span>
+  )
+  <ul>
+    <li>Le champ <i>user_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>utilisateur</i>.</li>
+    <li>Le champ <i>modele_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>modele</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>possede</span> (
+    <span class='foreign primary'>user_id</span>,
+    <span class='foreign primary'>modele_id</span>
+  )
+  <ul>
+    <li>Le champ <i>user_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>utilisateur</i>.</li>
+    <li>Le champ <i>modele_id</i> fait partie de la clef primaire de la table. C'est une clef étrangère qui a migré directement à partir de l'entité <i>modele</i>.</li>
+  </ul>
+</div>
+
+<div>
+  <span class='relation'>utilisateur</span> (
+    <span class='primary'>user_id</span>,
+    <span class='normal'>pseudo</span>,
+    <span class='normal'>mail</span>,
+    <span class='normal'>mdp</span>,
+    <span class='normal'>admin</span>,
+    <span class='normal'>created_at</span>
+  )
+  <ul>
+    <li>Le champ <i>user_id</i> constitue la clef primaire de la table. C'était déjà un identifiant de l'entité <i>utilisateur</i>.</li>
+    <li>Les champs <i>pseudo</i>, <i>mail</i>, <i>mdp</i>, <i>admin</i> et <i>created_at</i> étaient déjà de simples attributs de l'entité <i>utilisateur</i>.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>

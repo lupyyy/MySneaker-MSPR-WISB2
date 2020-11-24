@@ -1,0 +1,9 @@
+modele: modele_id [int], nom [varchar(64)], date[datetime], prix[decimal]
+appartient, 1N marque, 1N modele
+marque: marque_id[int], nom [varchar(64)], histoire [text]
+
+souhaite, 0N utilisateur, 0N modele
+
+possede, 0N utilisateur, 0N modele
+utilisateur: user_id[int], pseudo [varchar(64)], mail [varchar(128)], mdp [varchar(256)], admin [int], created_at [date] 
+
