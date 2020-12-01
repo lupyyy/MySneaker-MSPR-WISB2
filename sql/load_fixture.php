@@ -5,8 +5,7 @@ $fichiers = ["modele.sql", "marque.sql", "utilisateur.sql", "appartient.sql", "s
 
 foreach ($fichiers as $fichier) {
     $sql .= file_get_contents('fixtures/' . $fichier);
-} echo $sql; 
-exit;
+}
 
 
 //$res = $dbh->exec($sql);
