@@ -1,0 +1,72 @@
+body {
+    background-color: #2A2A2A;
+}
+
+
+/* HEADER */
+
+.logo {
+    width: 10%;
+    height: 10%;
+}
+
+.header {
+    display: flex;
+    column-count: 3;
+}
+
+.nav {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 150%;
+    color: black;
+}
+
+li {
+    display: inline;
+    padding: 12px;
+    margin-top: 90px;
+}
+
+.search {
+    height: 100px;
+}
+
+
+/* BANNIÈRE */
+
+.banniere {
+    width: 100%;
+}
+
+
+/* CHAUSSURES DU MOMENT */
+
+.shoes {
+    text-align: center;
+}
+
+.wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    text-align: center;
+    padding: 3%;
+}
+
+.moment {
+    width: 80%;
+    height: 80%;
+}
+
+.para {
+    padding: 6%;
+}
+
+.marques {
+    background: url(docs/graphics/Alexander-McQueen-Oversized-Ivory-Black-W.jpg);
+}
