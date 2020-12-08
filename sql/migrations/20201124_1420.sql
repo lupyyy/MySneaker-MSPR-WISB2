@@ -41,9 +41,9 @@ CREATE TABLE `utilisateur` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `appartient` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
-ALTER TABLE `appartient` ADD FOREIGN KEY (`marque_id`) REFERENCES `marque` (`marque_id`);
-ALTER TABLE `souhaite` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
-ALTER TABLE `souhaite` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`);
-ALTER TABLE `possede` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`);
-ALTER TABLE `possede` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`);
+ALTER TABLE `appartient` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`) ON DELETE CASCADE;
+ALTER TABLE `appartient` ADD FOREIGN KEY (`marque_id`) REFERENCES `marque` (`marque_id`) ON DELETE CASCADE;
+ALTER TABLE `souhaite` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`) ON DELETE CASCADE;
+ALTER TABLE `souhaite` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`) ON DELETE CASCADE;
+ALTER TABLE `possede` ADD FOREIGN KEY (`modele_id`) REFERENCES `modele` (`modele_id`) ON DELETE CASCADE;
+ALTER TABLE `possede` ADD FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`user_id`) ON DELETE CASCADE;

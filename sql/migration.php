@@ -1,5 +1,5 @@
 <?php
-    require "../src/connect_database.php";
+    require "./connect_database.php";
     $date = "20201124_1420";
     $versions = "migrations-versions.txt";
     

@@ -1,5 +1,5 @@
 <?php
-require "../src/connect_database.php";
+require "./connect_database.php";
 $sql = '';
 $fichiers = ["modele.sql", "marque.sql", "utilisateur.sql", "appartient.sql", "souhaite.sql", "possede.sql"];
 
