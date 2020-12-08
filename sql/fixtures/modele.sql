@@ -43,6 +43,7 @@ INSERT INTO `modele` (`modele_id`, `nom`,`date`, `prix`) VALUES
 (42,'Run Star Hike Hi Black White Gum', '2019-03-16 00:00:00', '420'),
 (43,'Chuck Taylor All-Star 2-in-1 70s Hi Feng Chen Wang Ivory Black', '2020-02-11 00:00:00', '210'),
 (44,'Chuck Taylor All-Star 70s Hi Comme des Garcons Play', '2018-07-07 00:00:00', '120'),
+(45,'Oversized Iridescent', '2020-10-03 00:00:00', '495'),
 (46,'Asics Gel-Lyte Neon Seaglass Safety Yellow', '2020-04-18 00:00:00', '320'),
 (47,'ASICS Gel-BND Mega Man', '2019-05-03 00:00:00', '190'),
 (48,'ASICS Gel-Lyte III OG Green Yellow (2019)', '2019-12-23 00:00:00', '530'),
@@ -51,5 +52,4 @@ INSERT INTO `modele` (`modele_id`, `nom`,`date`, `prix`) VALUES
 (51,'Speed Trainer White Black 2019 (W)', '2016-10-22 00:00:00', '420'),
 (52,'Oversized Ivory Black (W)', '2019-09-23 00:00:00', '300'),
 (53,'Oversized Red', '2010-08-16 00:00:00', '450'),
-(54,'Oversized Clear Sole Black', '2010-08-18 00:00:00', '280'),
-(55,'Oversized Iridescent', '2020-10-03 00:00:00', '495 ');
+(54,'Oversized Clear Sole Black', '2010-08-18 00:00:00', '280');
