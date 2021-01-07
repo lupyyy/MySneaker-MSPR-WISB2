@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        td{
-            border : 1px solid black;
-        }
-    </style>
-</head>
-
 <?php
-function table_tpl($thead,$rows){
-$html = <<<EOT
+require_once "head.php";
+function table_tpl($thead, $rows)
+{
+    $html = <<<EOT
 
 <table>
         <thead>
@@ -30,8 +18,7 @@ $html = <<<EOT
 
 EOT;
 
-return $html;
-
+    return $html;
 }
 
 function echo_ligne_modeles($donnee)
@@ -54,17 +41,17 @@ EOT;
 
 <body>
     <h1>Page adminstration MySneakers.</h1>
-            <?php
+    <?php
 
-            require_once "connect_database.php";
-            $rows = "";
-            $donnees = $dbh->query("SELECT * FROM modele");
-            foreach ($donnees->fetchAll(PDO::FETCH_ASSOC) as $n) {
-                $rows .= echo_ligne_modeles($n);
-            }
-            echo table_tpl(['Liste des modeles', 'prix'], $rows);
-            ?>
-        </tbody>
+    require_once "connect_database.php";
+    $rows = "";
+    $donnees = $dbh->query("SELECT * FROM modele");
+    foreach ($donnees->fetchAll(PDO::FETCH_ASSOC) as $n) {
+        $rows .= echo_ligne_modeles($n);
+    }
+    echo table_tpl(['Liste des modeles', 'prix'], $rows);
+    ?>
+    </tbody>
     </table>
 </body>
 

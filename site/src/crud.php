@@ -2,6 +2,8 @@
 
 require_once "connect_database.php";
 
+require_once "head.php";
+
 function formulaire_Modification($donnee)
 {
 
@@ -33,7 +35,10 @@ if (isset($_GET['delete'])) {
 
     $sql = 'DELETE FROM ' . $_GET['table'] . ' WHERE modele_id = ' . $_GET['id'];
     if ($query = $dbh->query($sql)) {
-        echo 'ok';
+        echo 'La suppresion est validé';
+        echo '</br><a href="./admin.php">Retour a la page admin</a>';
+    } else {
+        echo 'Erreur, veuillez ressayer';
     }
 }
 
@@ -62,13 +67,13 @@ if (!empty($_POST)) {
         $err = 1;
 
     if ($err == 0) {
-        $sql = 'UPDATE `modele` SET `nom` = ($nom) , `prix` = ($prix) WHERE `modele_id` = ($modele_id)';
+        $sql = "UPDATE `modele` SET nom = '$nom', prix = '$prix' WHERE `modele_id` = $id";
     }
 
     if ($dbh->exec($sql) === 1) {
         echo 'La base de donnée a bien etait modifiée';
-        exit;
+        echo '</br><a href="./admin.php">Retour a la page admin</a>';
     } else {
-        exit('Ca marche pas frere');
+        exit('Erreur, veuillez ressayer');
     }
 }
