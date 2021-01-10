@@ -11,10 +11,15 @@
 }
 
 .nav {
-    text-align: center;
+    padding: 85px;
 }
 
-a {
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+) a {
     text-decoration: none;
     font-size: 100%;
     color: black;
@@ -28,6 +33,12 @@ li {
 
 .search {
     height: 100px;
+    padding: 85px;
+}
+
+.loupe {
+    height: 20px;
+    width: 20px;
 }
 
 
@@ -42,6 +53,10 @@ li {
 
 .shoes {
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    padding: 10px;
+    color: purple;
 }
 
 .wrapper {
@@ -62,10 +77,10 @@ li {
     padding: 6%;
 }
 
-.marques {
-    background: url(docs/graphics/Alexander-McQueen-Oversized-Ivory-Black-W.jpg);
+tr {
+    border: 1px solid black;
 }
 
-tr {
-    border : 1px solid black;
+footer {
+    background-color: grey;
 }
