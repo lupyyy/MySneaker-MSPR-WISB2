@@ -1,5 +1,5 @@
 CREATE TABLE `modele` (
-  `modele_id` int,
+  `modele_id` int AUTO_INCREMENT,
   `nom` varchar(64),
   `date` datetime,
   `prix` decimal,
@@ -14,7 +14,7 @@ CREATE TABLE `appartient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `marque` (
-  `marque_id` int,
+  `marque_id` int AUTO_INCREMENT,
   `nom` varchar(64),
   `histoire` text,
   `img` varchar(128),
@@ -34,7 +34,7 @@ CREATE TABLE `possede` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `utilisateur` (
-  `user_id` int,
+  `user_id` int AUTO_INCREMENT,
   `pseudo` varchar(64),
   `mail` varchar(128),
   `mdp` varchar(256),

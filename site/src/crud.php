@@ -69,30 +69,85 @@ if (isset($_GET['update'])) {
             }
         }
     }
+
+
+    if (!empty($_POST)) {
+        $id = $_POST['modele_id'];
+        $nom = $_POST['nom'];
+        $prix = $_POST['prix'];
+        $err = 0;
+        if (empty($id))
+            $err = 1;
+        if (empty($nom))
+            $err = 1;
+        if (empty($prix))
+            $err = 1;
+
+        if ($err == 0) {
+            $sql = "UPDATE `modele` SET nom = '$nom', prix = '$prix' WHERE `modele_id` = $id";
+        }
+
+        if ($dbh->exec($sql) === 1) {
+            echo '<div class="text-center"></div>';
+            echo '<main style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">';
+            echo 'La modification est validé';
+            echo '</br><a href="./admin.php">Retour a l\'administration</a>';
+            echo '</main>';
+        } else {
+            echo '<div class="text-center"></div>';
+            echo '<main style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">';
+            echo 'Une erreur est survenue';
+            echo '</br><a href="./admin.php">Retour a l\'administration</a>';
+            echo '</main>';
+        }
+    }
 }
 
-if (!empty($_POST)) {
-    $id = $_POST['modele_id'];
+// debut: ajout
+if (isset($_GET['create'])) {
+
     $nom = $_POST['nom'];
+    $marque_id = $_POST['marque'];
     $prix = $_POST['prix'];
+
+    if (empty($_FILES['image'])) {
+        $uploadFile = " ";
+    } else {
+        $uploadFile = basename($_FILES['image']['name']);
+    }
+
     $err = 0;
-    if (empty($id))
-        $err = 1;
     if (empty($nom))
+        $err = 1;
+    if (empty($marque_id))
         $err = 1;
     if (empty($prix))
         $err = 1;
 
+    // insertion en bdd ajout
     if ($err == 0) {
-        $sql = "UPDATE `modele` SET nom = '$nom', prix = '$prix' WHERE `modele_id` = $id";
-    }
+        $sql = "INSERT INTO `modele` (`nom`,`prix`,`img`) VALUES ('$nom','$prix','$uploadFile')";
 
+        if (!empty($_FILES['image'])) {
+            $uploadDir = '../assets/uploads/';
+            if (
+                move_uploaded_file($_FILES['image']['tmp_name'], $uploadDir . $uploadFile)
+            ) {
+            }
+        }
+    }
+// liasion en la marque et l'id
     if ($dbh->exec($sql) === 1) {
-        echo '<div class="text-center"></div>';
-        echo '<main style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">';
-        echo 'La modification est validé';
-        echo '</br><a href="./admin.php">Retour a l\'administration</a>';
-        echo '</main>';
+        $sql = "SELECT modele_id FROM `modele` ORDER BY `modele_id` DESC LIMIT 1";
+        $modele_id = $dbh->lastInsertId();
+        $sql = "INSERT INTO `appartient` (`marque_id`,`modele_id`) VALUES ('$marque_id', '$modele_id')";
+        if ($dbh->exec($sql) === 1) {
+            echo '<div class="text-center"></div>';
+            echo '<main style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">';
+            echo 'L\'ajout est effectué';
+            echo '</br><a href="./admin.php">Retour a l\'administration</a>';
+            echo '</main>';
+        }
     } else {
         echo '<div class="text-center"></div>';
         echo '<main style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">';
@@ -101,3 +156,4 @@ if (!empty($_POST)) {
         echo '</main>';
     }
 }
+

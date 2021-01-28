@@ -22,16 +22,6 @@
                     Utilisateurs
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Reports
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Integrations
-                </a>
-            </li>
         </ul>
     </div>
 </nav>
