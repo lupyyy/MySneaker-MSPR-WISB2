@@ -1,6 +1,7 @@
 <?php
-    require "./connect_database.php";
-    $date = "20201124_1420";
+    require_once "./connect_database.php";
+
+    $date = "20210118_1946";
     $versions = "migrations-versions.txt";
     
     if(!file_exists($versions) || strpos(file_get_contents($versions),$date) === false) {
