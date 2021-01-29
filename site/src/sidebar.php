@@ -8,17 +8,17 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="modele.php">
+                <a class="nav-link" href="./modele.php">
                     Modeles
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="./marque.php">
                     Marques
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="./utilisateurs.php">
                     Utilisateurs
                 </a>
             </li>

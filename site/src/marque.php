@@ -28,9 +28,9 @@ function echo_ligne_modeles($donnee)
     $html = <<<EOT
        <tr>
           <td>{$donnee['nom']}</td>
-          <td>{$donnee['prix']}€</td>
-          <td><a href="crud.php?delete&table=modele&id={$donnee['modele_id']}"><button>Supprimer</button></a></td>
-          <td><a href="crud.php?update&table=modele&id={$donnee['modele_id']}"><button>Modifier</button></a></td>
+          <td>{$donnee['histoire']}€</td>
+          <td><a href="crud.php?delete&table=marque&id={$donnee['marque_id']}"><button>Supprimer</button></a></td>
+          <td><a href="crud.php?update&table=marque&id={$donnee['marque_id']}"><button>Modifier</button></a></td>
 
        </tr>
 EOT;
@@ -47,24 +47,15 @@ EOT;
         <main style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">
 
 
-            <form action="crud.php?create&table=modele" method="post" enctype="multipart/form-data">
-                <h1 class="h3 mb-3 fw-normal">Ajout modele</h1>
+            <form action="crud.php?create&table=marque" method="post" enctype="multipart/form-data">
+                <h1 class="h3 mb-3 fw-normal">Ajout marque</h1>
                 <div>
                     <label for="nom">Nom : </label>
                     <input type="text" class="form-control" name="nom" placeholder="Nom du modele" autofocus required>
                 </div>
-                <label name="marque">Marque : </label>
-                <select class="form-control" name="marque" required>
-                    <?php
-                    $sql = "SELECT nom, marque_id from marque;";
-                    foreach ($dbh->query($sql) as $ligne) {
-                        echo "<option value=" . $ligne['marque_id'] . ">" . $ligne['marque_id'] . "-" .$ligne['nom'] . "</option>";
-                    }
-                    ?>
-                </select>
                 <div>
-                    <label for="prix">Prix : </label>
-                    <input style="margin-bottom : 10px" type="number" class="form-control" placeholder ="10" name="prix" autofocus required>
+                    <label for="histoire">Histoire : </label>
+                    <input style="margin-bottom : 10px" type="text" class="form-control" placeholder="10" name="histoire" autofocus required>
                 </div>
 
                 <div>
@@ -80,17 +71,14 @@ EOT;
     <?php
 
     $rows = "";
-    $donnees = $dbh->query("SELECT * FROM modele");
+    $donnees = $dbh->query("SELECT * FROM marque");
     foreach ($donnees->fetchAll(PDO::FETCH_ASSOC) as $n) {
         $rows .= echo_ligne_modeles($n);
     }
-    echo table_tpl(['Liste des modeles', 'prix'], $rows);
+    echo table_tpl(['Liste des marques', 'Histoire'], $rows);
     ?>
     </tbody>
     </table>
-    <div class="login-form">
-
-    </div>
 
     </body>
 
