@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href="assets/css/style.css">
-    <title>My sneakers</title>
-</head>
-
-<body>
-    <!-- HEADER -->
-    <header class="header">
-        <img src="../docs/graphics/logomysneakers_1.svg" class="logo">
-        <div class="nav">
-            <ul>
-                <li> <a class="menu" href="accueil.html"> Accueil </a> </li>
-                <li> <a class="menu" href="catalogue.html"> Catalogue </a> </li>
-                <li> <a class="menu" href="histoire.html"> L'histoire de la sneakers </a> </li>
-                <li> <a class="menu" href="prochain.html"> Prochain... </a> </li>
-                <li> <a class="menu" href="les.html"> Les ... </a> </li>
-                <li> <a class="menu" href="connexion.html"> Connexion/Inscription </a> </li>
-            </ul>
-        </div>
-        <div class="search">
-            <input type="search" id="site-search" name="q" aria-label="Search through site content">
-            <button> <img class="loupe" src="assets/img/loupe.png"></button>
-        </div>
-    </header>
+<?php 
+include "./src/connect_database.php";
+include "./src/head.php";
+include "./src/navbar.php";
+?>
     <!-- IMAGE -->
     <div>
         <img class="banniere" src="assets/img/bannier.jpeg">
