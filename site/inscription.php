@@ -1,6 +1,5 @@
 <?php
-require_once './src/connect_database.php';
-require_once './src/head.php'
+require './src/head.php'
 ?>
 
 <body style="background-color : #F1E9FF;">

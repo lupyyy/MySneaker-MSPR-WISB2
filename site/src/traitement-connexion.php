@@ -1,6 +1,6 @@
 <?php
 
-require 'connect_database.php';
+include 'connect_database.php';
 
 if (isset($_POST['email']) && isset($_POST['mdp'])) {
     $email = $_POST['email'];
@@ -34,6 +34,6 @@ if (isset($_POST['email']) && isset($_POST['mdp'])) {
         // cas ou, la combinaison email/mdp ne marche pas
     } else {
         echo '<p class="text-center text-danger"> La combinaison email/ mots-de-passe n\'est pas exact ! Reesayer !</p>';
-        include '../connexion.php';
+        include './connexion.php';
     }
 }

@@ -1,5 +1,5 @@
 <?php
-require 'connect_database.php';
+include 'connect_database.php';
 if (!empty($_POST)) {
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
