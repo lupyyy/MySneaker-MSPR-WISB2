@@ -3,57 +3,8 @@ include "./src/connect_database.php";
 include "./src/head.php";
 include "./src/navbar.php";
 ?>
-    <!-- IMAGE -->
-    <div>
-        <img class="banniere" src="assets/img/bannier.jpeg">
-    </div>
-    <!-- CHAUSSURE MOMENT -->
-
-    <section>
-        <h1 class="shoes"> CHAUSSURES DU MOMENT </h1>
-        <div class="wrapper">
-            <div><img class="moment" src="assets/img/7d021ed9-9a59-4fac-8197-ef60686c612e.jpeg">
-                <p class="para"> Alexander Mcqueen Oversized Ivory </p>
-            </div>
-            <div><img class="moment" src="assets/img/2344f608-8606-41c6-b536-01ad73619990.jpeg">
-                <p class="para"> Speed trainer white Black 2019 </p>
-            </div>
-            <div><img class="moment" src="assets/img/nike-air-max-2-light-atmos.jpg">
-                <p class="para"> Air max 2 Light Atmos </p>
-            </div>
-            <div><img class="moment" src="assets/img/yeezy-700-v3-arzareth.jpg">
-                <p class="para"> Yeez 700 V3 Arzareth </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CARROUSEL 
-
-    <center>
-        <h1 style="background-color: black; padding: 10%; color: white;"> Carrousel ????? </h1>
-    </center>
--->
-    <!-- MARQUES POPULAIRES -->
-
-    <section>
-        <h1 class="shoes"> MARQUES POPULAIRES </h1>
-        <div class="wrapper">
-            <div><button> <img src="assets/img/logo-balenciaga.jpg"> </button>
-            </div>
-            <div><button> <img src="assets/img/1-nike.jpg"> </button>
-            </div>
-            <div> <button> <img src="assets/img/adidas-logo.png"> </button>
-            </div>
-            <div> <button> <img src="assets/img/u2beDQ.gif"> </button>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <img class="logo" src="../docs/graphics/logomysneakers_1.svg">
-    </footer>
+ <body>
+ 
 </body>
 
 </html>
