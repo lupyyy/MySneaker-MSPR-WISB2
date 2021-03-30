@@ -1,5 +1,5 @@
 <?php
-require_once "head.php";
+require_once "head_back.php";
 require_once "connect_database.php";
 function table_tpl($thead, $rows)
 {

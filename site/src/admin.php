@@ -1,5 +1,5 @@
 <?php
-require_once "head.php";
+require_once "head_back.php";
 require_once "sidebar.php";
 require_once "connect_database.php"; ?>
 
