@@ -35,7 +35,7 @@ function echo_ligne_modeles($donnee)
           <td>{$donnee['pseudo']}</td>
           <td>{$donnee['mail']}</td>
           <td>{$donnee['admin']}</td>
-          <td><a href="crud.php?admin&table=utilisateur&id={$donnee['user_id']}"><button>Admin On/off</button></a></td>
+          <td><a href="crud.php?admin&table=utilisateur&id={$donnee['user_id']}"  onclick="return confirm('Voulez vous vraiment faire ceci ?');"><button>Admin On/off</button></a></td>
        </tr>
 EOT;
 

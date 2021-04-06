@@ -29,7 +29,7 @@ function echo_ligne_modeles($donnee)
        <tr>
           <td>{$donnee['nom']}</td>
           <td>{$donnee['histoire']}€</td>
-          <td><a href="crud.php?delete&table=marque&id={$donnee['marque_id']}"><button>Supprimer</button></a></td>
+          <td><a href="crud.php?delete&table=marque&id={$donnee['marque_id']}" onclick="return confirm('Voulez vous vraiment supprimer ?');"><button>Supprimer</button></a></td>
           <td><a href="crud.php?update&table=marque&id={$donnee['marque_id']}"><button>Modifier</button></a></td>
 
        </tr>
